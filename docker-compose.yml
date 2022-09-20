@@ -1,6 +1,6 @@
 version: "3.1" 
 services:
-  dovecot:
+  mbsync:
     image: thehelpfulidiot/mbsync:latest
     container_name: mbsync
     volumes:
