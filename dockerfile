@@ -12,7 +12,7 @@ FROM ubuntu:latest
 RUN apt update && apt upgrade -y
 RUN apt install -y isync
 RUN apt install -y openssl
-RUN apt install -y ca-certificates nano
+RUN apt install -y ca-certificates nano sudo
 
 
 COPY .mbsyncrc /etc/.mbsyncrc
