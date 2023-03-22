@@ -9,6 +9,8 @@ FROM ubuntu:latest
 #ENV ssl="required"
 #yes, no, or required
 #ENV server_address="imap.example.com"
+ENV pipeline_depth="1024"
+
 RUN apt update && apt upgrade -y
 RUN apt install -y isync
 RUN apt install -y openssl
