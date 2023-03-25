@@ -11,4 +11,5 @@ sed -i "s/{remote_password}/${remote_password}/g" /etc/.mbsyncrc
 sed -i "s/{ssltype}/${ssltype}/g" /etc/.mbsyncrc
 sed -i "s/{sslversions}/${sslversions}/g" /etc/.mbsyncrc
 sed -i "s/{mailbox_name}/${mailbox_name}/g" /etc/.mbsyncrc
+sed -i "s/{pipeline_depth}/${pipeline_depth}/g" /etc/.mbsyncrc
 sudo -u mbsync mbsync -Va -c /etc/.mbsyncrc
