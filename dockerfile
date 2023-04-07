@@ -10,6 +10,7 @@ FROM ubuntu:latest
 #yes, no, or required
 #ENV server_address="imap.example.com"
 ENV pipeline_depth="1024"
+ENV timeout="20"
 
 RUN apt update && apt upgrade -y
 RUN apt install -y isync
