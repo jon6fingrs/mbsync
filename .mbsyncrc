@@ -3,6 +3,7 @@ IMAPAccount {mailbox_name}
 Host {host_name}
 Port {port}
 User {remote_username}
+Timeout {timeout}
 # For simplicity, this is how to read the password from another file.
 # For better security you should use GPG https://gnupg.org/
 Pass {remote_password}

@@ -10,5 +10,5 @@ sed -i "s/{remote_username}/${remote_username}/g" /etc/.mbsyncrc
 sed -i "s/{remote_password}/${remote_password}/g" /etc/.mbsyncrc
 sed -i "s/{ssltype}/${ssltype}/g" /etc/.mbsyncrc
 sed -i "s/{sslversions}/${sslversions}/g" /etc/.mbsyncrc
-sed -i "s/{mailbox_name}/${mailbox_name}/g" /etc/.mbsyncrc
+sed -i "s/{timeout}/${timeout}/g" /etc/.mbsyncrc
 sudo -u mbsync mbsync -Va -c /etc/.mbsyncrc
