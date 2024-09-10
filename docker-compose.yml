@@ -14,3 +14,4 @@ services:
       - sslversions=TLSv1.2
       - mailbox_name=gmail
       - pipeline_depth=1024 #default=1024 but may need to be changed for some mail providers (https://manpages.debian.org/unstable/isync/mbsync.1.en.html#PipelineDepth)
+      - PUID=1000
