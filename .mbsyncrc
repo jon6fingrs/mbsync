@@ -8,10 +8,12 @@ User {remote_username}
 Pass {remote_password}
 SSLType {ssltype}
 SSLVersions {sslversions}
+PipelineDepth {pipeline_depth}
+
 IMAPStore {mailbox_name}-remote
 Account {mailbox_name}
 UseNamespace no
-PipelineDepth {pipeline_depth}
+
 
 # This section describes the local storage
 MaildirStore {mailbox_name}-local
@@ -23,8 +25,8 @@ SubFolders Verbatim
 
 # This section a "channel", a connection between remote and local
 Channel {mailbox_name}
-Master :{mailbox_name}-remote:
-Slave :{mailbox_name}-local:
+Far :{mailbox_name}-remote:
+Near :{mailbox_name}-local:
 Patterns *
 Expunge None
 Remove None
