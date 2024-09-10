@@ -33,5 +33,5 @@ Remove None
 CopyArrivalDate yes
 # Sync Pull
 Sync PullNew
-Create Slave
+Create Near
 SyncState *
