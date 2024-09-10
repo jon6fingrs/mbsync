@@ -8,7 +8,7 @@ User {remote_username}
 Pass {remote_password}
 SSLType {ssltype}
 SSLVersions {sslversions}
-PipelineDepth {pipeline_depth}
+PipelineDepth {pipeline_depth} #default 1024
 
 IMAPStore {mailbox_name}-remote
 Account {mailbox_name}
