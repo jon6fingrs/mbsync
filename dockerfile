@@ -1,15 +1,5 @@
 FROM ubuntu:latest
-#ENV email_username="username"
-#ENV email_password="password"
-#ENV UID="1000"
-#ENV disable_plaintext_auth="yes"
-# yes or no
-#ENV ssl_cert="dovecot.pem"
-#ENV ssl_key="dovecot.pem"
-#ENV ssl="required"
-#yes, no, or required
-#ENV server_address="imap.example.com"
-ENV pipeline_depth="1024"
+
 
 RUN apt update && apt upgrade -y
 RUN apt install -y isync
