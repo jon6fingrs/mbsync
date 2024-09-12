@@ -19,4 +19,4 @@ sed -i "s/{sslversions}/${sslversions}/g" /etc/.mbsyncrc
 sed -i "s/{mailbox_name}/${mailbox_name}/g" /etc/.mbsyncrc
 sed -i "s/{pipeline_depth}/${pipeline_depth}/g" /etc/.mbsyncrc
 sudo -u \#${PUID} mbsync -Va -c /etc/.mbsyncrc
-if [[ ${cron} = "yes" ]]; then PUID=$PUID cron -f; fi
+if [[ ${cron} = "yes" ]]; then cron -f; fi
