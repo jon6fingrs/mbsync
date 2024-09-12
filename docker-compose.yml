@@ -1,10 +1,10 @@
 version: "3.1" 
 services:
   mbsync:
-    image: thehelpfulidiot/mbsync:latest
+    image: test/mbsync
     container_name: mbsync
     volumes:
-      - /path/to/mail:/mail
+      - email:/mail
     environment:
       - host_name=server
       - port=port
@@ -16,3 +16,6 @@ services:
       - pipeline_depth=1024 #default=1024 but may need to be changed for some mail providers (https://manpages.debian.org/unstable/isync/mbsync.1.en.html#PipelineDepth)
       - PUID=1000
       - cron=yes
+
+volumes:
+  email:

@@ -24,4 +24,5 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-*/5 * * * * sudo -u \#${PUID} mbsync -Va -c /etc/.mbsyncrc > /proc/1/fd/1 2>/proc/1/fd/2
+*/5 * * * * sudo -u mbsync flock -n /run/lock/mbsync mbsync -Va -c /etc/.mbsyncrc > /proc/1/fd/1 2>/proc/1/fd/2
+

@@ -5,7 +5,9 @@ if [ -z ${ssltype} ]; then export ssltype=IMAPS; fi
 if [ -z ${port} ]; then export port=993; fi
 if [ -z ${sslversions} ]; then export sslversions="[TLSv1] [TLSv1.1] [TLSv1.2] [TLSv1.3]"; fi
 
-#useradd -m -u ${PUID} -G users,sudo -g users mbsync
+useradd -m -u ${PUID} -G users,sudo -g users mbsync
+
+
 chown ${PUID} -R /mail
 chmod 774 -R /mail
 sed -i "s/{host_name}/${host_name}/g" /etc/.mbsyncrc
