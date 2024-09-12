@@ -1,6 +1,10 @@
 # mbsync
 easy to get up and running mbsync instance
 
-This container needs either a cron job or systemd timer for the following command:
+There are two ways to run this container. You can run with the cron variable "yes" and mbsync will run, and then after completion, cron will open and will sync mail every 5 miunutes, all within the container.
+
+Alternatively, you can set cron to "off" and the container will simply run once each time its called. So for regular email syncing, you would need something like a cron job or systemd timer for the following command:
 
 docker container start mail-backup
+
+https://hub.docker.com/repository/docker/thehelpfulidiot/mbsync/general
