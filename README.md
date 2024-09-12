@@ -8,3 +8,6 @@ Alternatively, you can set cron to "off" and the container will simply run once 
 docker container start mail-backup
 
 https://hub.docker.com/repository/docker/thehelpfulidiot/mbsync/general
+
+See how to combine mbsync (clone remote mailbox), dovecot (serve mailbox as local IMAP server), and solr (index mailbox for better searching):
+https://github.com/jon6fingrs/mbsync-dovecot
