@@ -5,7 +5,16 @@ if [ -z ${ssltype} ]; then export ssltype=IMAPS; fi
 if [ -z ${port} ]; then export port=993; fi
 if [ -z ${sslversions} ]; then export sslversions="[TLSv1] [TLSv1.1] [TLSv1.2] [TLSv1.3]"; fi
 
-useradd -m -u ${PUID} -G users,sudo -g users mbsync
+if id -u ${PUID} >/dev/null 2>&1; then
+    # If a user with PUID exists, get the username associated with it
+    old_user=$(getent passwd "${PUID}" | cut -d: -f1)
+    # Rename the old user to mbsync
+    usermod -l mbsync "${old_user}"
+else
+    # If no user with PUID exists, create a new user
+    useradd -m -u ${PUID} -G users,sudo -g users mbsync
+fi
+
 
 
 chown ${PUID} -R /mail
